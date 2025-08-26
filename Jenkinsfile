@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        IMAGE = "yourdockerhubusername/devops-simple:${BUILD_NUMBER}"
+        IMAGE = "thirumurugan133/devops-simple:${BUILD_NUMBER}"
     }
 
     stages {
