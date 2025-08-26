@@ -14,7 +14,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build(IMAGE)
+                    docker.build('thiru817/simple-devops-project')
                 }
             }
         }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 withDockerRegistry(credentialsId: 'dockerhub-creds', url: '') {
                     script {
-                        docker.image(IMAGE).push()
+                        docker.image('thiru817/simple-devops-project').push()
                     }
                 }
             }
