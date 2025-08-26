@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-devops
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-devops
+  template:
+    metadata:
+      labels:
+        app: simple-devops
+    spec:
+      containers:
+      - name: simple-devops
+        image: yourdockerhubusernam/devops-simple:latest
+        ports:
+        - containerPort: 5000
